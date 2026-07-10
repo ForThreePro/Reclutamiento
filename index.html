@@ -6,150 +6,36 @@
   <title>SCARLET ROSES | Reclutamiento</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:wght@400;600;700&display=swap');
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: #050510;
-      font-family: 'Exo 2', sans-serif;
-      color: #fff;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    /* Fondo con grid neón */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: 
-        linear-gradient(rgba(255,0,64,0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,64,255,0.1) 1px, transparent 1px);
-      background-size: 50px 50px;
-      z-index: -1;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 30px 20px;
-    }
-
-    /* Header con efecto neón */
-    .header {
-      text-align: center;
-      padding: 40px 20px;
-      border: 2px solid;
-      border-image: linear-gradient(90deg, #FF0040, #0040FF) 1;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(10px);
-      margin-bottom: 30px;
-    }
-
-    .logo {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 10vw;
-      font-weight: 900;
+    body { background: #050510; font-family: 'Exo 2', sans-serif; color: #fff; }
+    body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(rgba(255,0,64,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,64,255,0.1) 1px, transparent 1px); background-size: 50px 50px; z-index: -1; }
+    .container { max-width: 700px; margin: 0 auto; padding: 30px 20px; }
+    .header { text-align: center; padding: 40px 20px; border: 2px solid; border-image: linear-gradient(90deg, #FF0040, #0040FF) 1;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); margin-bottom: 30px; }
+    .logo { font-family: 'Orbitron', sans-serif; font-size: 10vw; font-weight: 900;
       background: linear-gradient(90deg, #FF0040 0%, #FFFFFF 50%, #0040FF 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 20px rgba(255,0,64,0.8);
-      letter-spacing: 4px;
-    }
-
-    .tag {
-      color: #00D9FF;
-      font-size: 4.5vw;
-      margin-top: 10px;
-      letter-spacing: 2px;
-    }
-
-    /* Cards con efecto vidrio */
-    .card {
-      background: rgba(255,0,64,0.08);
-      border-left: 4px solid #FF0040;
-      border-radius: 12px;
-      padding: 25px;
-      margin: 25px 0;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 0 30px rgba(255,0,64,0.2);
-      transition: 0.3s;
-    }
-
-    .card.blue {
-      background: rgba(0,64,255,0.08);
-      border-left: 4px solid #0040FF;
-      box-shadow: 0 0 30px rgba(0,64,255,0.2);
-    }
-
-    .card:hover {
-      transform: translateX(10px);
-    }
-
-    .card h2 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 6vw;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .card.red h2 { color: #FF0040; }
-    .card.blue h2 { color: #0040FF; }
-
-    .list {
-      font-size: 4vw;
-      line-height: 2;
-    }
-
-    .list li {
-      list-style: none;
-      padding-left: 30px;
-      position: relative;
-      margin: 10px 0;
-    }
-
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 4px; }
+    .tag { color: #00D9FF; font-size: 4.5vw; margin-top: 10px; }
+    .card { background: rgba(255,0,64,0.08); border-left: 4px solid #FF0040; border-radius: 12px; padding: 25px; margin: 25px 0; }
+    .card.blue { background: rgba(0,64,255,0.08); border-left: 4px solid #0040FF; }
+    .card.purple { background: rgba(128,0,255,0.08); border-left: 4px solid #8000FF; }
+    .card h2 { font-family: 'Orbitron', sans-serif; font-size: 6vw; margin-bottom: 15px; }
+    .card.red h2 { color: #FF0040; } .card.blue h2 { color: #0040FF; } .card.purple h2 { color: #8000FF; }
+    .list { font-size: 4vw; line-height: 2; }
+    .list li { list-style: none; padding-left: 30px; position: relative; margin: 10px 0; }
     .card.red .list li::before { content: '🔴'; position: absolute; left: 0; }
     .card.blue .list li::before { content: '🔵'; position: absolute; left: 0; }
-
+    .card.purple .list li::before { content: '📱'; position: absolute; left: 0; }
     .warning { color: #FF0040; font-weight: 700; }
-
-    /* Botón neón */
-    .btn {
-      display: block;
-      text-align: center;
-      background: linear-gradient(90deg, #FF0040, #0040FF);
-      color: white;
-      padding: 18px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-family: 'Orbitron';
-      font-size: 5vw;
-      font-weight: 700;
-      margin: 30px 0;
-      box-shadow: 0 0 40px rgba(255,0,64,0.5);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 40px rgba(255,0,64,0.5); }
-      50% { box-shadow: 0 0 60px rgba(0,64,255,0.7); }
-    }
-
-    .footer {
-      text-align: center;
-      color: #888;
-      font-size: 3.5vw;
-      margin-top: 30px;
-    }
-
-    @media (min-width: 600px) {
-      .logo { font-size: 50px; }
-      .tag, .list, .btn { font-size: 18px; }
-      .card h2 { font-size: 24px; }
-    }
+    .btn { display: block; text-align: center; background: linear-gradient(90deg, #FF0040, #0040FF); color: white;
+      padding: 18px; border-radius: 12px; text-decoration: none; font-family: 'Orbitron'; font-size: 5vw; font-weight: 700; margin: 30px 0; box-shadow: 0 0 40px rgba(255,0,64,0.5); }
+    .btn:hover { transform: scale(1.03); }
+    .numero { color: #00D9FF; font-weight: 600; text-decoration: none; }
+    .numero:hover { text-decoration: underline; }
+    .footer { text-align: center; color: #888; font-size: 3.5vw; margin-top: 30px; }
+    @media (min-width: 600px) { .logo { font-size: 50px; } .tag, .list, .btn { font-size: 18px; } .card h2 { font-size: 24px; } }
   </style>
 </head>
 <body>
@@ -162,13 +48,9 @@
     <div class="card red">
       <h2>⚔️ REQUISITOS</h2>
       <ul class="list">
-        <li>NO excluir a nadie</li>
-        <li>Full activo/a</li>
-        <li>Tener +14 años</li>
-        <li>Ser región Sur</li>
-        <li>Respetar gustos</li>
-        <li>Ser nivel 40 en adelante</li>
-        <li>Disponibilidad para salas y act.</li>
+        <li>NO excluir a nadie</li><li>Full activo/a</li><li>Tener +14 años</li>
+        <li>Ser región Sur</li><li>Respetar gustos</li>
+        <li>Ser nivel 40 en adelante</li><li>Disponibilidad para salas y act.</li>
       </ul>
     </div>
 
@@ -183,7 +65,18 @@
       </ul>
     </div>
 
-    <a class="btn" href="https://wa.me/tu_numero">UNIRME AL TEAM 🌹</a>
+    <div class="card purple">
+      <h2>💬 CONTACTO DIRECTO</h2>
+      <p style="margin-bottom:15px; color:#ccc;">Si no puedes unirte al link, háblanos directo:</p>
+      <ul class="list">
+        <li><a href="https://wa.me/447429342285" class="numero">+44 7429 342285</a></li>
+        <li><a href="https://wa.me/5493884143702" class="numero">+54 9 388 414-3702</a></li>
+        <li><a href="https://wa.me/5492246502953" class="numero">+54 9 2246 50-2953</a></li>
+        <li><a href="https://wa.me/5492234469356" class="numero">+54 9 223 446-9356</a></li>
+      </ul>
+    </div>
+
+    <a class="btn" href="https://chat.whatsapp.com/Bx2Jhsm1JRd5mrTUr8M13B?s=cl&p=a&ilr=4&amv=0">UNIRME AL TEAM 🌹</a>
 
     <p class="footer">COLORES OFICIALES: ROJO 🔴 Y AZUL 🔵 | 2026</p>
   </div>
