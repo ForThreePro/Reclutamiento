@@ -5,36 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SCARLET ROSES | Reclutamiento</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:wght@400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #050510; font-family: 'Exo 2', sans-serif; color: #fff; }
+    body { background: #050510; font-family: 'Exo 2', sans-serif; color: #fff; font-style: italic; }
     body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       background: linear-gradient(rgba(255,0,64,0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(0,64,255,0.1) 1px, transparent 1px); background-size: 50px 50px; z-index: -1; }
     .container { max-width: 700px; margin: 0 auto; padding: 30px 20px; }
     .header { text-align: center; padding: 40px 20px; border: 2px solid; border-image: linear-gradient(90deg, #FF0040, #0040FF) 1;
       background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); margin-bottom: 30px; }
-    .logo { font-family: 'Orbitron', sans-serif; font-size: 10vw; font-weight: 900;
+    .logo { font-family: 'Orbitron', sans-serif; font-size: 10vw; font-weight: 900; font-style: italic;
       background: linear-gradient(90deg, #FF0040 0%, #FFFFFF 50%, #0040FF 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 4px; }
-    .tag { color: #00D9FF; font-size: 4.5vw; margin-top: 10px; }
-    .card { background: rgba(255,0,64,0.08); border-left: 4px solid #FF0040; border-radius: 12px; padding: 25px; margin: 25px 0; }
+    .tag { color: #00D9FF; font-size: 4.5vw; margin-top: 10px; font-style: italic; }
+    .card { background: rgba(255,0,64,0.08); border-left: 4px solid #FF0040; border-radius: 12px; padding: 25px; margin: 25px 0; font-style: italic; }
     .card.blue { background: rgba(0,64,255,0.08); border-left: 4px solid #0040FF; }
     .card.purple { background: rgba(128,0,255,0.08); border-left: 4px solid #8000FF; }
-    .card h2 { font-family: 'Orbitron', sans-serif; font-size: 6vw; margin-bottom: 15px; }
+    .card h2 { font-family: 'Orbitron', sans-serif; font-size: 6vw; margin-bottom: 15px; font-style: italic; }
     .card.red h2 { color: #FF0040; } .card.blue h2 { color: #0040FF; } .card.purple h2 { color: #8000FF; }
-    .list { font-size: 4vw; line-height: 2; }
+    .list { font-size: 4vw; line-height: 2; font-style: italic; }
     .list li { list-style: none; padding-left: 30px; position: relative; margin: 10px 0; }
     .card.red .list li::before { content: '🔴'; position: absolute; left: 0; }
     .card.blue .list li::before { content: '🔵'; position: absolute; left: 0; }
     .card.purple .list li::before { content: '📱'; position: absolute; left: 0; }
     .warning { color: #FF0040; font-weight: 700; }
     .btn { display: block; text-align: center; background: linear-gradient(90deg, #FF0040, #0040FF); color: white;
-      padding: 18px; border-radius: 12px; text-decoration: none; font-family: 'Orbitron'; font-size: 5vw; font-weight: 700; margin: 30px 0; box-shadow: 0 0 40px rgba(255,0,64,0.5); }
-    .btn:hover { transform: scale(1.03); }
+      padding: 18px; border-radius: 12px; text-decoration: none; font-family: 'Orbitron'; font-size: 5vw; font-weight: 700; margin: 30px 0; font-style: italic; }
     .numero { color: #00D9FF; font-weight: 600; text-decoration: none; }
-    .numero:hover { text-decoration: underline; }
-    .footer { text-align: center; color: #888; font-size: 3.5vw; margin-top: 30px; }
+    .footer { text-align: center; color: #888; font-size: 3.5vw; margin-top: 30px; font-style: italic; }
     @media (min-width: 600px) { .logo { font-size: 50px; } .tag, .list, .btn { font-size: 18px; } .card h2 { font-size: 24px; } }
   </style>
 </head>
